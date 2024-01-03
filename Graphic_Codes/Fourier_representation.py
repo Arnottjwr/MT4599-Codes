@@ -2,7 +2,7 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
-from FreqFunctions import plucked_string
+from WaveFunctions import plucked_string
 
 L = 65 
 c = 1
