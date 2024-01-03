@@ -18,12 +18,12 @@ fig,ax = plt.subplots(1,figsize=(10, 6))
 
 for i in range(1, modes + 1):
     modes = string_modes(x, i, L)
-    ax.plot(x, modes + 5/2*i, label=f'n = {i}', color=(0.2 + i/5, 0.4, 0.8)) 
-    ax.plot(x, -modes +5/2*i,color=(0.2 + i/5, 0.4, 0.8))
     a1 = np.sin(i* np.pi*0.275)
     a2 = -np.sin(i* np.pi*0.275)
     b1 = np.sin(i* np.pi*0.075)
     b2 = -np.sin(i* np.pi*0.075)
+    ax.plot(x, modes + 5/2*i, label=f'n = {i}', color=(0.2 + i/5, 0.4, 0.8)) 
+    ax.plot(x, -modes +5/2*i,color=(0.2 + i/5, 0.4, 0.8))
     ax.plot(([0.275,0.275]),([a1 + 5/2*i,a2 + 5/2*i]),'k',linestyle = '--') #Neck Pickup Line
     ax.plot(([0.075,0.075]),([b1 + 5/2*i,b2 + 5/2*i]),'k',linestyle = '--') #Bidge Pickup Line
 
