@@ -1,3 +1,5 @@
+from WaveFunctions import plucked_string
+
 L = 65 
 c = 10
 a = 1
