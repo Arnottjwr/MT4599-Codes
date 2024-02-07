@@ -48,9 +48,5 @@ def plucked_string(x,t,L,p,c,a,n):
     def string_time_deriv(x0,t,L,p,c,a,n): 
     """
     Returns the time derivative of the string at a constant position x0 
-    
     """
-
-    A = (2*a*L**2)*(n*np.pi*c)/(n**2)*(np.pi**2)*p*(p-L) 
-
-    return A * np.sin(n*np.pi*x0/L) * np.sin(n*np.pi*p/L) * np.sin(n*np.pi*c*t/L)
+    return  (-2 * a * c * np.sin(n*np.pi*p/L) * np.sin(n*np.pi*x0/L) * np.sin(n*np.pi*c*t/L))/p*(L-p)*n*np.pi
